@@ -1,0 +1,53 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
+use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Event;
+use App\Events\AdminPasswordChanged;
+use App\Listeners\SendAdminPasswordChangedNotification;
+use App\Models\Session;
+use App\Models\Notification;
+use App\Observers\SessionObserver;
+use App\Observers\NotificationObserver;
+
+
+class EventServiceProvider extends ServiceProvider
+{
+    /**
+     * The event to listener mappings for the application.
+     *
+     * @var array<class-string, array<int, class-string>>
+     */
+    protected $listen = [
+        Registered::class => [
+            SendEmailVerificationNotification::class,
+        ],
+        AdminPasswordChanged::class => [
+            SendAdminPasswordChangedNotification::class,
+        ],    
+        Logout::class => [
+            UpdateSessionLogoutAt::class,
+        ],
+    ];
+
+    /**
+     * Register any events for your application.
+     */
+    public function boot(): void
+    {
+        //       
+        Session::observe(SessionObserver::class);
+        Notification::observe(NotificationObserver::class);
+    }
+
+    /**
+     * Determine if events and listeners should be automatically discovered.
+     */
+    public function shouldDiscoverEvents(): bool
+    {
+        return false;
+    }
+} 
