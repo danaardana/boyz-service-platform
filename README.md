@@ -4,9 +4,9 @@
 A comprehensive Laravel-based e-commerce admin dashboard specifically designed for motorcycle spare parts business with Shopee integration. Features a complete transformation from crypto trading to automotive parts management with advanced admin tools, real-time notifications, and customer engagement systems.
 
 ## **Documentation (in Bahasa)**
-[View Bussines Requirements Document](https://drive.google.com/file/d/1d7r3K0WaD9NC4GvLGszpTkle2Z59nGUB/view?usp=sharing)
-[View Software Requirements Document](https://drive.google.com/file/d/195-i7xH_4Ec66LZJ6GolvGh6Zd1cdxuC/view?usp=sharing)
-[Soon Functional Requirement Specification](#)
+- [View Bussines Requirements Document](https://drive.google.com/file/d/1d7r3K0WaD9NC4GvLGszpTkle2Z59nGUB/view?usp=sharing)
+- [View Software Requirements Document](https://drive.google.com/file/d/195-i7xH_4Ec66LZJ6GolvGh6Zd1cdxuC/view?usp=sharing)
+- [Soon Functional Requirement Specification](#)
 
 
 ## **🎯 Core Business Features**
